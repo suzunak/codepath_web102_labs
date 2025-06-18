@@ -126,9 +126,10 @@ const BaristaForm = () => {
                     {inputs["milk"]} 
                 </div>
                 <RecipeChoices
+                    // handleChange is a function that is passed as a prop
                     handleChange={(e) => setInputs((prevState) => ({
-                        ...prevState,
-                        [e.target.name]: e.target.value,
+                        ...prevState, // to keep other states preserved
+                        [e.target.name]: e.target.value, // sets e.g. milk: oat (occurs in RecipeChoices)
                     }))}
                     label="milk"
                     choices={ingredients["milk"]}
