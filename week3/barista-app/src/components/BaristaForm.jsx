@@ -50,28 +50,41 @@ const BaristaForm = () => {
     const [correct_blended, setCheckedBlended] = useState('');
 
     const onCheckAnswer = () => {
-        if (trueRecipe.temp != inputs['temperature']){
+        // array that has all the ingredients .includes(user's input)
+        if (!ingredients['temperature'].includes(inputs['temperature'])) {
+            alert("For temperature, that isn't even an option!")
+        }
+        else if (trueRecipe.temp != inputs['temperature']){
             setCheckedTemperature('wrong');
         }
         else {
             setCheckedTemperature('correct');
         }
 
-        if (trueRecipe.syrup != inputs['syrup']){
+        if (!ingredients['syrup'].includes(inputs['syrup'])) {
+            alert("For syrup, that isn't even an option!")
+        }
+        else if (trueRecipe.syrup != inputs['syrup']){
             setCheckedSyrup('wrong');
         }
         else {
             setCheckedSyrup('correct');
         }
 
-        if (trueRecipe.milk != inputs['milk']){
+        if (!ingredients['milk'].includes(inputs['milk'])) {
+            alert("For milk, that isn't even an option!")
+        }
+        else if (trueRecipe.milk != inputs['milk']){
             setCheckedMilk('wrong');
         }
         else {
             setCheckedMilk('correct');
         }
 
-        if (trueRecipe.blended != inputs['blended']){
+        if (!ingredients['blended'].includes(inputs['blended'])) {
+            alert("For blended, that isn't even an option!")
+        }
+        else if (trueRecipe.blended != inputs['blended']){
             setCheckedBlended('wrong');
         }
         else {
