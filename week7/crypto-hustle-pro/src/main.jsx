@@ -10,7 +10,7 @@ createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<App/>}/>
+          <Route index element={<App />}/>
           <Route path="/coinDetails/:symbol" element={<DetailView />}/>
         </Route>
     </Routes>
