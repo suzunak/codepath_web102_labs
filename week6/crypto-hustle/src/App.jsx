@@ -77,13 +77,11 @@ function App() {
                   coinData.ProofType !== "N/A"
                 )
                 .map(([coin, coinData]) => (
-                  <div key={coinData}>
                     <CoinInfo
                       image={list.Data[coin].ImageUrl}
                       name={list.Data[coin].FullName}
                       symbol={list.Data[coin].Symbol}
                     />
-                  </div>
                 ))
               }
         </ul>
