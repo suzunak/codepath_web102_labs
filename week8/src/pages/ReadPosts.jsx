@@ -16,6 +16,8 @@ const ReadPosts = (props) => {
             // set state of posts
             setPosts(data)
         }
+        fetchPost();
+        
     }, [props])
     
     return (
